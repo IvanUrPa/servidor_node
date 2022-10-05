@@ -1,6 +1,6 @@
 // ** Importar modulos
 //const nombre_constante = require('nombre_del_modulo_requerido')
-const hola_mundo = require('hola-mundo-nodejs')
+//const hola_mundo = require('hola-mundo-nodejs')
 
 // ** console.log(nombre_constante.nombre_funcion )
 //console.log (hola_mundo.mensaje())
@@ -27,10 +27,11 @@ const server = http.createServer(onRequest)
 //response.end()
 //}
 
-// ** funcion anonima para el puerto
 const port = 3000
 const fs = require('fs')
 const qs = require('querystring')
+
+// ** funcion anonima para el puerto
 server.listen(port, ()=>{
     console.log('Mi servidor esta corriendo en localhost:3000')
 })
@@ -64,6 +65,7 @@ function onRequest(req, res) {
                 //res.setStatus = 200
                 //res.setHeader('Content-type', 'text/html')
                 //res.write('Insertando usuarios')
+                //res.end()
                 var datos = ''
                 req.on('data', (d)=>{
                     datos += d
